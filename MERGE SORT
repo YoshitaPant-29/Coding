@@ -1,0 +1,49 @@
+# 10. How is the merge sort algorithm implemented?
+Merge Sort is a divide-and-conquer algorithm that splits the list into smaller sublists, sorts each sublist, and then merges the sorted sublists.
+
+The process continues recursively until the entire list is sorted.
+Example for list [5, 3, 8, 4, 2]:
+After sorting, the list will be [2, 3, 4, 5, 8].
+
+CODE:PYTHON
+def merge_sort(arr):
+    # Base case: a list of zero or one element is already sorted
+    if len(arr) <= 1:
+        return arr
+
+    # Step 1: Split the list into two halves
+    mid = len(arr) // 2
+    left_half = merge_sort(arr[:mid])
+    right_half = merge_sort(arr[mid:])
+
+    # Step 2: Merge the sorted halves
+    return merge(left_half, right_half)
+
+def merge(left, right):
+    sorted_list = []
+    i = j = 0
+
+    # Compare elements from both lists and append smaller one
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            sorted_list.append(left[i])
+            i += 1
+        else:
+            sorted_list.append(right[j])
+            j += 1
+
+    # Add remaining elements (if any)
+    sorted_list.extend(left[i:])
+    sorted_list.extend(right[j:])
+
+    return sorted_list
+
+# Example usage
+arr = [5, 3, 8, 4, 2]
+print("Original list:", arr)
+sorted_arr = merge_sort(arr)
+print("Sorted list:", sorted_arr)
+
+#OUTPUT
+Original list: [5, 3, 8, 4, 2]
+Sorted list: [2, 3, 4, 5, 8]
