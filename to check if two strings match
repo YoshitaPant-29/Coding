@@ -1,0 +1,33 @@
+#8. Write code to check if two strings match where one string contains wildcard characters
+This problem checks if two strings match where one string contains wildcard characters. The wildcards are:
+
+* for any sequence of characters (including an empty sequence).
+? for exactly one character.
+Example:
+“he?lo” matches “hello”, but not “healo”.
+“he*o” matches “hello”, “hero”, or “heyo”.
+# CODE:PYTHON
+def solve(a,b):
+    n,m=len(a),len(b)
+    if n==0 and m==0:
+        return True
+    if n > 1 and a[0] == '*' and m == 0:
+        return False
+    if (n > 1 and a[0] == '?') or (n != 0 and m !=0 and a[0] == b[0]):
+        return solve(a[1:],b[1:]);
+    if n !=0 and a[0] == '*':
+        return solve(a[1:],b) or solve(a,b[1:])
+    return False
+
+a = input("Enter pattern (with * and ?): ")
+b = input("Enter text to match: ")
+
+print("Match:", solve(a, b))
+
+#OUTPUT:
+1.Enter pattern (with * and ?): he?lo
+Enter text to match: hello
+Match: True
+2.Enter pattern (with * and ?): he?lo
+Enter text to match: hero
+Match: False
