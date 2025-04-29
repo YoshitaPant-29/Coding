@@ -16,3 +16,5 @@ else:
     print("not a perfect number")
 
 # OUTPUT:
+enter num:28
+its a perfect number
