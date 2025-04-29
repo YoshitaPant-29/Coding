@@ -1,0 +1,39 @@
+# 5. Write code to Check if two strings are Anagram or not
+Two strings are called anagrams if they contain the same characters in the same frequencies, but possibly in different orders.
+
+This code checks whether two given strings are anagrams of each other.
+Example: Are “listen” and “silent” anagrams?
+Sort both:
+“listen” → “eilnst”
+
+“silent” → “eilnst”
+Both are the same, so “listen” and “silent” are anagrams.
+
+# CODE:PYTHON
+
+string1=input("enter string1:")
+string2=input("enter string2:")
+
+if len(string1) != len(string2):
+    print("not possible")
+    
+else:
+    string1=sorted(string1)
+    string2=sorted(string2)
+if(string1==string2):
+    print("yes")
+else:
+    print("No")
+
+
+
+# OUTPUT1
+enter string1:yoshita
+enter string2:sakshi 
+not possible
+No
+
+# OUTPUT2
+enter string1:listen
+enter string2:silent
+yes
