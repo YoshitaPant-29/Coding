@@ -1,0 +1,28 @@
+# 3. Write code of Greatest Common Divisor 
+This problem asks to find the Greatest Common Divisor (GCD) of two given numbers. The GCD of two numbers is the largest positive integer that divides both numbers without leaving a remainder.
+
+The Euclidean algorithm is a popular method for efficiently computing the GCD.
+Example: Find GCD of 36 and 60:
+The common divisors of 36 and 60 are 1, 2, 3, 4, 6, 9, 12, 18, 36 and 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60.
+The largest common divisor is 12.
+
+# CODE:PYTHON
+num1=int(input("enter num1:"))
+num2=int(input("enter num2:"))
+
+def gcdfunction(num1,num2):
+    if num1>num2:
+        small=num2
+    else:
+        small=num1
+    for i in range(1,small+1):
+        if (num1%i==0) and (num2%i==0):
+            gcd=i
+    print("GCD is {}".format(gcd))
+    
+gcdfunction(num1,num2)
+
+#OUTPUT:
+enter num1:36
+enter num2:60
+GCD is 12
