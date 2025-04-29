@@ -1,0 +1,21 @@
+# 6. Write code Check if the given string is Palindrome or not
+A palindrome is a word, phrase, or sequence that reads the same backward as forward, ignoring spaces, punctuation, and capitalization.
+
+This code checks if a given string is a palindrome.
+Example for a palindrome:
+“madam” — reads the same backward as forward
+
+# CODE:PYTHON
+string1=input("enter string1:")
+string2=string1[::-1]
+if(string1==string2):
+    print("its a palindrome")
+else:
+    print("no")
+
+#OUTPUT
+1.enter string1:madam
+its a palindrome
+
+2.enter string1:apple
+no
