@@ -1,0 +1,22 @@
+## 1. Write a code to reverse a number
+To reverse a number, you need to take the digits of the number and rearrange them in the opposite order.
+
+Start by converting the number to a string, reverse that string, and then convert it back to an integer. This will give you the reversed version of the original number.
+Example: If the number is 908701, take digits from last → 1, 0, 7, 8, 0, 9 → and make it 107809.
+
+### CODE:PYTHON
+num=int(input("Enter a number to be reversed:"))
+reverse=0
+temp=num
+while num>0:
+    remainder=num%10
+    reverse=(reverse*10)+remainder
+    num=num//10
+print("The given number is {} and reverse is {}".format(temp,reverse))
+
+
+### OUTPUT
+Enter a number to be reversed:156
+The given number is 156 and reverse is 651
+
+=== Code Execution Successful ===
