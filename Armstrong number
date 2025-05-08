@@ -1,0 +1,34 @@
+Q. Write the code to for Armstrong number
+An Armstrong number (or Narcissistic number) is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
+
+For example:
+153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153.
+370 is an Armstrong number because 3^3 + 7^3 + 0^3 = 370.
+
+Code:
+def is_armstrong(num):
+    digits=str(num)
+    power=len(digits)
+    total=0
+    sum=0
+    for digit in digits:
+        sum=sum+int(digit) ** power
+    total=sum
+    print(total)
+    if total==num:
+        return True
+    else:
+        return False
+        
+num = 153
+if is_armstrong(num):
+    print(f"{num} is an Armstrong number.")
+else:
+    print(f"{num} is not an Armstrong number.")
+
+
+output:
+153
+153 is an Armstrong number.
+
+=== Code Execution Successful ===
