@@ -1,0 +1,27 @@
+Q.Write a code to check for the longest palindrome in an array.
+This problem asks to find the longest palindrome in an array of strings. A palindrome is a word, phrase, or sequence that reads the same backward as forward.
+
+The goal is to identify the longest string in the array that is a palindrome.
+Example for array [“racecar”, “level”, “hello”, “madam”, “world”]:
+The longest palindrome is “racecar”.
+
+code :
+def is_palindrome(word):
+    return word == word[::-1]
+
+def longest_palindrome(arr):
+    longest = ""
+    for word in arr:
+        if is_palindrome(word) and len(word) > len(longest):
+            longest = word
+    return longest
+
+# Example usage
+arr = ["racecar", "level", "hello", "madam", "world"]
+result = longest_palindrome(arr)
+print("Longest palindrome:", result)
+
+Output:
+Longest palindrome: racecar
+
+=== Code Execution Successful ===
