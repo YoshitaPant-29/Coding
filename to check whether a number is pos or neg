@@ -1,0 +1,28 @@
+Python Program to check if a Number Is Positive Or Negative
+Code 
+1.Brute force
+num = 15
+if num > 0:
+    print('Positive')
+elif num < 0:
+    print('Negative')
+else:
+    print('Zero')
+
+2. using nested loops
+num=15
+if num>=0:
+    if num>0:
+        print(" pos ")
+    else:
+        print("it's a zero")
+else:
+    print("its a neg num")
+
+3.using Ternary operator 
+num=15
+print("positive" if num>=0 else "negative")
+
+OUTPUT:
+pos 
+
