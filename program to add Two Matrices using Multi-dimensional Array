@@ -1,0 +1,27 @@
+Q.Write a program to add Two Matrices using Multi-dimensional Array.
+This problem asks to add two matrices using a multi-dimensional array. Matrix addition is done by adding corresponding elements of two matrices of the same size.
+
+The sum matrix will have the same dimensions as the input matrices.
+Example for matrices:
+Matrix A:
+[1, 2, 3]
+[4, 5, 6]
+
+Matrix B:
+[7, 8, 9]
+[10, 11, 12]
+
+The sum of Matrix A and Matrix B:
+[1+7, 2+8, 3+9]
+[4+10, 5+11, 6+12]
+
+Result:
+[8, 10, 12]
+[14, 16, 18]
+
+Output:
+Sum of Matrix A and Matrix B:
+[8, 10, 12]
+[14, 16, 18]
+
+=== Code Execution Successful ===
